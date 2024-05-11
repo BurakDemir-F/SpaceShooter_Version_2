@@ -1,6 +1,6 @@
 ﻿namespace Ships
 {
-    public class FloatingShip : GunShip
+    public class FloatingShip : AutoFireShip
     {
         
     }

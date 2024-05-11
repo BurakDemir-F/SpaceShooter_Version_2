@@ -1,6 +1,6 @@
 ﻿namespace Ships
 {
-    public class DirectShip : GunShip
+    public class DirectShip : AutoFireShip
     {
                 
     }

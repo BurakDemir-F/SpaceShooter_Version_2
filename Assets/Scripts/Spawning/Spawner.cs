@@ -21,6 +21,7 @@ namespace Spawning
         [SerializeField] private Transform _playerSpawnTransform;
 
         [SerializeField] private PlayerTargetProvider _playerTargetProvider;
+        [SerializeField] private EnemyTargetProvider _enemyTargetProvider;
         
         private bool _shouldSpawn;
 
@@ -31,7 +32,7 @@ namespace Spawning
         public SpaceShip SpawnPlayer()
         {
             var playerShip = GetShip(_playerPoolKey, _playerSpawnTransform.position);
-            playerShip.Construct(_borderProvider,null,_pool);
+            playerShip.Construct(_borderProvider,_enemyTargetProvider,_pool);
             playerShip.StartMoving();
             _playerTargetProvider.SetPlayerTransform(playerShip.transform);
             return playerShip;
