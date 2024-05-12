@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c7d8c3c566435a8b0ea9ff3d628d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ShipType>k__BackingField: 3
+  <ShipType>k__BackingField: 7
   _bulletPoolKey: PlayerBullet
   _bulletSpawnInterval: 1
   _fireKeyKode: 32

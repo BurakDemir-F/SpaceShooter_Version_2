@@ -15,7 +15,7 @@ namespace Managers
 
         private void Start()
         {
-            _spawner.InitializePool();
+            _spawner.Initialize();
             var playerShip = _spawner.SpawnPlayer();
             _healthUI.SetHealth(playerShip.ShipHealth);
             _spawner.StartSpawning();

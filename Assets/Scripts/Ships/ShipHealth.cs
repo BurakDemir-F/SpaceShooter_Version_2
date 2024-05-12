@@ -5,13 +5,14 @@ namespace Ships
 {
     public class ShipHealth : MonoBehaviour , IDamageable
     {
-        [SerializeField] private int _maxHealth;
-        [SerializeField] private int _health;
-        public int MaxHealth => _maxHealth;
-        public int CurrentHealth => _health;
+        [SerializeField] private float _maxHealth;
+        [SerializeField] private float _health;
+        public float MaxHealth => _maxHealth;
+        public float CurrentHealth => _health;
+        public float HealthNormalized => _health / _maxHealth;
         
         public event Action OnExplode;
-        public event Action<int> OnHealthChanged; 
+        public event Action<float> OnHealthChanged; 
         public void Damage(int damage)
         {
             _health -= damage;

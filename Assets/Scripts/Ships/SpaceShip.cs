@@ -9,7 +9,7 @@ namespace Ships
 {
     public abstract class SpaceShip : MonoBehaviour, IPoolObject
     {
-        [field:SerializeField] public ShipType ShipType { get; private set; } 
+        [field:SerializeField] public ShipType ShipType { get; private set; }
         protected MovementBehaviour _movementBehaviour;
         protected ShipTrigger _shipTrigger;
         protected IBorderProvider _borderProvider;
@@ -25,7 +25,7 @@ namespace Ships
 
         protected bool IsMoving;
         protected WeaponType _weaponHitBy;
-        public void Construct(IBorderProvider borderProvider,ITargetProvider targetProvider,IPool pool)
+        public virtual void Construct(IBorderProvider borderProvider,ITargetProvider targetProvider,IPool pool)
         {
             _movementBehaviour = GetComponent<MovementBehaviour>();
             _health = GetComponent<ShipHealth>();
@@ -78,7 +78,7 @@ namespace Ships
             _health.Damage(weapon.Damage);
         }
 
-        private void HealthChangeHandler(int currentHealth)
+        private void HealthChangeHandler(float currentHealth)
         {
             
         }

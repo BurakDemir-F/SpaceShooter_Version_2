@@ -6,6 +6,8 @@ namespace Ships
     public class AutoFireShip : BulletShip
     {
         [SerializeField] private float _startWait = 3f;
+        public override ITargetProvider BulletTargetProvider => _targetProvider;
+
         public override void StartMoving()
         {
             base.StartMoving();

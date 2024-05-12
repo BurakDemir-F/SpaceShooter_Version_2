@@ -5,7 +5,10 @@
         None,
         RotatingShip,
         FloatingShip,
+        FloatingRotationBulletShip,
         DirectShip,
-        SplineShip
+        SplineShip,
+        MeteorShip,
+        PlayerShip
     }
 }

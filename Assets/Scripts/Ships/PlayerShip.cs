@@ -10,7 +10,9 @@ namespace Ships
         private bool _isBulletFired;
         private float _bulletTimeCounter;
         public event Action OnEnemyHit;
-        
+
+        public override ITargetProvider BulletTargetProvider => _targetProvider;
+
         private void Update()
         {
             if(!IsMoving)

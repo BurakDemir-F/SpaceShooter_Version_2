@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a440b5b6f745cbb6afccd29c0cf11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ShipType>k__BackingField: 3
+  <ShipType>k__BackingField: 4
   _bulletPoolKey: DirectBullet
   _bulletSpawnInterval: 1
   _startWait: 3

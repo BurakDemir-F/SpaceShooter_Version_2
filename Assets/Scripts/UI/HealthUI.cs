@@ -23,7 +23,7 @@ namespace UI
             _health.OnExplode -= ExplodeHandler;
         }
 
-        private void HealthChangedHandler(int health)
+        private void HealthChangedHandler(float health)
         {
             UpdateUI(health);
         }
@@ -34,7 +34,7 @@ namespace UI
             _healthText.SetText("Game Over");
         }
 
-        private void UpdateUI(int newHealth)
+        private void UpdateUI(float newHealth)
         {
             _healthText.SetText($"Health: {newHealth.ToString()}");
         }

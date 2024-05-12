@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62184ac501d419dbde571d88e7b92f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ShipType>k__BackingField: 2
+  <ShipType>k__BackingField: 3
   _bulletPoolKey: RotationBullet
   _bulletSpawnInterval: 1
   _startWait: 3

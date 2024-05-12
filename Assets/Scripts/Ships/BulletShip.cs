@@ -3,16 +3,18 @@ using UnityEngine;
 
 namespace Ships
 {
-    public class BulletShip : SpaceShip
+    public abstract class BulletShip : SpaceShip
     {
         [SerializeField] protected string _bulletPoolKey;
         [SerializeField] protected float _bulletSpawnInterval;
+
+        public abstract ITargetProvider BulletTargetProvider{ get;}
         
         protected void SpawnBullet()
         {
             var bullet = _pool.Get<Bullet>(_bulletPoolKey);
             bullet.transform.position = _weapon.FireTransform.position;
-            bullet.Construct(_borderProvider,_targetProvider,null);
+            bullet.Construct(_borderProvider,BulletTargetProvider,null);
             bullet.OnExplode += BulletExplodeHandler;
             bullet.StartMoving();
         }
