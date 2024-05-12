@@ -26,6 +26,7 @@ namespace Ships.Weapons
         None,
         DeadZone,
         Ship,
-        Bullet
+        Bullet,
+        ShipEquipment
     }
 }

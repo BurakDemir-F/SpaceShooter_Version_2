@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Border;
@@ -122,12 +121,12 @@ namespace Spawning
             if(_shipSpawnProperties == null && _shipSpawnProperties.Count == 0)
                 return;
 
-            Gizmos.color = Color.black;
+            Gizmos.color = Color.yellow;
             foreach (var shipSpawnProperties in _shipSpawnProperties)
             {
                 foreach (var spawnTransform in shipSpawnProperties.SpawnPositions)
                 {
-                    Gizmos.DrawSphere(spawnTransform.position,1f);
+                    Gizmos.DrawSphere(spawnTransform.position,3f);
                 }
             }
         }

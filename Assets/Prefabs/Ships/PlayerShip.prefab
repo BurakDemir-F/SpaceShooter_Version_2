@@ -610,7 +610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ShipType>k__BackingField: 7
   _bulletPoolKey: PlayerBullet
-  _bulletSpawnInterval: 1
+  _bulletSpawnInterval: 0.1
   _fireKeyKode: 32
 --- !u!114 &8243242642795257396
 MonoBehaviour:

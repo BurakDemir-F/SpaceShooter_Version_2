@@ -9,6 +9,7 @@
         DirectShip,
         SplineShip,
         MeteorShip,
-        PlayerShip
+        PlayerShip,
+        MeteorShipWithEquipment
     }
 }
