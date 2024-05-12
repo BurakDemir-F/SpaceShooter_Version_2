@@ -1,12 +1,14 @@
 ﻿using Ships;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class HealthUI : MonoBehaviour 
     {
         [SerializeField] private TMP_Text _healthText;
+        [SerializeField] private Image _healthBar;
         private ShipHealth _health;
 
         public void SetHealth(ShipHealth health)
@@ -37,6 +39,7 @@ namespace UI
         private void UpdateUI(float newHealth)
         {
             _healthText.SetText($"Health: {newHealth.ToString()}");
+            _healthBar.fillAmount = _health.HealthNormalized;
         }
     }
 }
