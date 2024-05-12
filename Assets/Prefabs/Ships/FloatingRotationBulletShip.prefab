@@ -543,6 +543,7 @@ MonoBehaviour:
   _bulletKey: DirectBullet
   _shootDirection: {x: 0, y: 0, z: 0}
   _damage: 20
+  _weaponType: 2
 --- !u!1 &3197712589014139912
 GameObject:
   m_ObjectHideFlags: 0

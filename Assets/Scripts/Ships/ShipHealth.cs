@@ -15,13 +15,14 @@ namespace Ships
         public void Damage(int damage)
         {
             _health -= damage;
-            OnHealthChanged?.Invoke(_health);
             if (_health < 0)
             {
                 _health = 0;
                 OnHealthChanged?.Invoke(_health);
                 OnExplode?.Invoke();
+                return;
             }
+            OnHealthChanged?.Invoke(_health);
         }
 
         public void RefreshHealth()

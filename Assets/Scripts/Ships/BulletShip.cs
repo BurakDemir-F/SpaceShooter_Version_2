@@ -17,7 +17,7 @@ namespace Ships
             bullet.StartMoving();
         }
 
-        protected void BulletExplodeHandler(SpaceShip bullet)
+        protected virtual void BulletExplodeHandler(SpaceShip bullet, WeaponType hitBy)
         {
             bullet.OnExplode -= BulletExplodeHandler;
             bullet.Destruct();

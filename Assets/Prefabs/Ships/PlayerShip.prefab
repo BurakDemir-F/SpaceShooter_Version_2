@@ -826,6 +826,7 @@ MonoBehaviour:
   _bulletKey: DirectBullet
   _shootDirection: {x: 0, y: 0, z: 0}
   _damage: 1500
+  _weaponType: 2
 --- !u!1 &8238378792525177308
 GameObject:
   m_ObjectHideFlags: 0

@@ -480,6 +480,7 @@ MonoBehaviour:
   _bulletKey: 
   _shootDirection: {x: 0, y: 0, z: 0}
   _damage: 50
+  _weaponType: 3
 --- !u!50 &5821069571064393013
 Rigidbody2D:
   serializedVersion: 4

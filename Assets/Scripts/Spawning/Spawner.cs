@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Border;
 using Movement;
 using Ships;
+using Ships.Weapons;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -69,7 +70,7 @@ namespace Spawning
             return ship;
         }
 
-        private void ShipExplodeHandler(SpaceShip ship)
+        private void ShipExplodeHandler(SpaceShip ship, WeaponType _)
         {
             ship.OnExplode -= ShipExplodeHandler;
             ship.Destruct();

@@ -1,4 +1,5 @@
 ﻿using System;
+using Ships.Weapons;
 using UnityEngine;
 
 namespace Ships
@@ -8,6 +9,8 @@ namespace Ships
         [SerializeField] private KeyCode _fireKeyKode = KeyCode.Space;
         private bool _isBulletFired;
         private float _bulletTimeCounter;
+        public event Action OnEnemyHit;
+        
         private void Update()
         {
             if(!IsMoving)
@@ -32,6 +35,17 @@ namespace Ships
             
             SpawnBullet();
             _isBulletFired = true;
+        }
+
+        protected override void BulletExplodeHandler(SpaceShip bullet, WeaponType weaponType)
+        {
+            if(weaponType == WeaponType.Ship)
+            {
+                OnEnemyHit?.Invoke();
+                Debug.Log("on enemy hit.");
+            }
+
+            base.BulletExplodeHandler(bullet,weaponType);
         }
     }
 }

@@ -21,10 +21,10 @@ namespace Ships
         public IPool Pool { get; set; }
         public GameObject GameObject { get; set; }
         public ShipHealth ShipHealth => _health;
-        public event Action<SpaceShip> OnExplode;
-        public event Action<int> OnHealthChanged;
+        public event Action<SpaceShip,WeaponType> OnExplode;
 
         protected bool IsMoving;
+        protected WeaponType _weaponHitBy;
         public void Construct(IBorderProvider borderProvider,ITargetProvider targetProvider,IPool pool)
         {
             _movementBehaviour = GetComponent<MovementBehaviour>();
@@ -64,16 +64,17 @@ namespace Ships
 
         public void OnReturnToPool()
         {
-            
+            _weaponHitBy = WeaponType.None;
         }
 
         private void ExplodeHandler()
         {
-            OnExplode?.Invoke(this);
+            OnExplode?.Invoke(this, _weaponHitBy);
         }
 
         private void HitHandler(Weapon weapon)
         {
+            _weaponHitBy = weapon.WeaponType;
             _health.Damage(weapon.Damage);
         }
 
