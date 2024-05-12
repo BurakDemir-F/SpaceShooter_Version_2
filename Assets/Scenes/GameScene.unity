@@ -4825,7 +4825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b5457246234f29aa37964ecf555b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _multiplyDuration: 10
+  _multiplyDuration: 3
   _currentMultiplier: 1
   _currentScore: 0
   _singleShipHitScore: 10
